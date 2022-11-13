@@ -1,26 +1,29 @@
 <?php
 
-use App\Assist\Controllers\CreateController;
-use App\Assist\Controllers\HomeController;
 use App\Assist\Core\Route;
-
-
+use App\Assist\Core\View;
+use App\Assist\Users\Controllers\UserController;
 
 $route = new Route();
 
 $route->get('/', function () {
-  $controller = new HomeController();
-  $controller->index();
+  $view = new View();
+  $view->render('Home/index');
 });
 
-$route->get('/create', function () {
-  $controller = new CreateController();
-  $controller->index();
+$route->get('/signup', function () {
+  $controller = new UserController();
+  $controller->render('Users/Views/signup');
 });
 
-$route->get('/users', function () {
-  $controller = new HomeController();
-  $controller->getDataJson();
+$route->get('/login', function () {
+  $controller = new UserController();
+  $controller->render('Users/Views/login');
+});
+
+$route->get('/register', function () {
+  $controller = new UserController();
+  $controller->register();
 });
 
 $route->run();

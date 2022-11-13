@@ -34,7 +34,7 @@ class Route
     }
 
     if ($this->matchPath === false) {
-      require_once __DIR__ . "/../../resources/views/error/404.php";
+      require_once __DIR__ . "/../Errors/404.php";
     }
   }
 }

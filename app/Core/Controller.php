@@ -16,4 +16,19 @@ class Controller
   {
     $this->view->render($view, $data);
   }
+
+  public function post($name)
+  {
+    return $_POST[$name];
+  }
+
+  public function get($name)
+  {
+    return $_GET[$name];
+  }
+
+  public function redirect($path)
+  {
+    return header("Location: $path");
+  }
 }

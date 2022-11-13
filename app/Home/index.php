@@ -1,9 +1,3 @@
-<?php
-
-$user =  $this->data['user'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,7 +10,7 @@ $user =  $this->data['user'];
 
 <body>
   <h1>Home</h1>
-  <h3>Bienvenido <?= $user ?></h3>
+  <h3>Bienvenido</h3>
 </body>
 
 </html>
